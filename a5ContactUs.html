@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<title>a5 Contact Us</title>
+   <link href="./css/a5ContactUs.css" rel="stylesheet">
+
+   <script src="js/a5Valid.js"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 style="text-align: center;"><b>Fαʂԋισɳ Gαʅʅҽɾყ</b></h1>
+        </header>
+        <nav>
+          <ul>
+              
+              <li> <a href="a5Store.html"> Home </a> </li>
+             <li> <a href="a5men.html"> Guys </a> </li>
+             <li> <a href="a5women.html"> Girls </a> </li>
+             <li> <a href="a5ContactUs.html"> Contact Us </a> </li>
+                 
+          </ul>
+         
+       </nav>
+       <aside>
+           
+       <h1>Contents</h1>   
+           <a href="a5Store.html"><b> Home</b> </a> <br><br><br>
+           <a href="a5men.html"><b> Guys </b></a><br><br><br>
+           <a href="a5women.html"><b> Girls </b></a><br><br><br>
+           <a href="a5ContactUs.html"><b> Contact Us</b> </a><br><br><br>
+        </aside>
+    </div>
+    <section class="main"> 
+                 
+<article>
+    <div class="center"> 
+    <h3>CONTACT US</h3>
+   
+    <div class="div2">
+        <div class="lable">
+            <form name = "form" method ="post"   action = "https://httpbin.org/post"
+            onsubmit="return validateForm()"   
+
+            style="background-color: rgb(196, 231, 255); ">
+            <input type="hidden" name="fullName" value="Kinnari Rajendrakumar Patel"/>
+                <input type="hidden" name="studentNumber" value="149399206"/>
+             <!-- <input type ="hidden" name = "secret" value ="version 1"> -->
+             <fieldset>
+                <legend>Form</legend>
+                                   
+                    <p style="background-color: rgb(196, 231, 255);">
+                        <sup style="color:red;">*</sup>
+                        <label for="username">
+                  Username:
+                </label> 
+                       
+                          <input class="inputtext" id="username" name="uname" type="text">
+                        
+                   </p>
+                   <p id=error></p>
+                
+                
+                <p style="background-color: rgb(196, 231, 255);">
+                    <sup style="color:red;">*</sup>
+                    <label for="type"> Gender:</label>
+                    <input type = "radio" name = "Gender" required id = "m" value = "m" > 
+                    <label for = "m">Male </label>
+                    <input type="radio" name="Gender" required id = "f" value ="f">
+                    <label for = "f"> Female </label>
+                    <input type="radio" name="Gender" required id = "n" value ="n">
+                    <label for = "n"> Not to share </label>
+
+
+                    <p style="background-color: rgb(196, 231, 255);">  
+                        <sup style="color:red;">*</sup>
+                        <label for="age"> 
+                        
+                           Age:
+                        </label>
+                        <input type = "number" name = "age" required id = "age" min="0" max ="999">
+                    </p>
+
+                    <p style="background-color: rgb(196, 231, 255);">
+                    <sup style="color:red;">*</sup>
+                    <label for="province">Province:</label>
+                        <select name="province" id="province" required>
+                         <option value="Ontario" selected>Ontario</option>
+                         <option value="Quebec">Quebec</option>
+                         <option value="British Columbia">British Columbia</option>
+                         <option value="Alberta">Alberta</option>
+                         <option value="Manitoba">Manitoba</option>
+                         <option value="Nova Scotia">Nova Scotia</option>
+                         <option value="Prince Edward Island">Prince Edward Island</option>
+                         <option value="Saskatchewan">Saskatchewan</option>
+                         <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+                         <option value="New Brunswick">New Brunswick</option>
+                        </select>
+                    
+                    </p>
+                    <p style="background-color: rgb(196, 231, 255);">
+                        <sup style="color:red;">*</sup>
+                    <label  for="phone">
+                         Phone Number: 
+                        </label>
+                        
+                    <input id = "phone" type="text" name="phone" placeholder="format: (NNN)NNN-NNNN. E.g., (416)111-2222">
+                <!-- <input type="text" name="phone" placeholder="phone number in 10 digits" size = "30" maxlength = "12"/> -->
+    </p>       
+        <p style="background-color: rgb(196, 231, 255);">
+                    <sup style="color:red;">*</sup>
+                     <label for="email">  Email: </label> 
+                    <input id="email" required name="email"  type="email"> 
+                </p>
+                    
+
+
+
+                <p style="background-color: rgb(196, 231, 255);">
+                    <sup style="color:red;">*</sup>
+                    Comments:
+                <textarea name="comments" cols="50" rows="6" required>
+          
+               </textarea>
+                
+            </p> 
+                <br>
+                <br>
+                <br>
+                
+                <input type = "reset" value="Reset"/> &nbsp; 
+                <input type ="submit" value ="Submit"/>
+               
+    </div>
+    </div>
+    </div>
+</fieldset>  
+    </div>
+</form>
+
+</article>
+</section>  
+
+</body>
+</html>
