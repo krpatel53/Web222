@@ -1,21 +1,26 @@
-const password = document.getElementById('password');
-const meter = document.getElementById('password-strength-meter');
-const text = document.getElementById('password-strength-text');
+function addStrengthMeter(inputId, meterId, textId) {
+  const passwordInput = document.getElementById(inputId);
+  const strengthMeter = document.getElementById(meterId);
+  const strengthText = document.getElementById(textId);
 
-password.addEventListener('input', () => {
-  const val = password.value;
-  let strength = 0;
+  if (!passwordInput) return;
 
-  if (val.length > 5) strength++;
-  if (val.match(/[a-z]+/)) strength++;
-  if (val.match(/[A-Z]+/)) strength++;
-  if (val.match(/[0-9]+/)) strength++;
-  if (val.match(/[\W]+/)) strength++;
+  passwordInput.addEventListener("input", () => {
+    const val = passwordInput.value;
+    let strength = 0;
 
-  // Limit to max=4 (same as in <meter>)
-  strength = Math.min(strength, 4);
-  meter.value = strength;
+    if (val.length >= 8) strength++;
+    if (/[A-Z]/.test(val)) strength++;
+    if (/[0-9]/.test(val)) strength++;
+    if (/[^A-Za-z0-9]/.test(val)) strength++;
 
-  const labels = ['Very Weak', 'Weak', 'Medium', 'Strong', 'Very Strong'];
-  text.textContent = labels[strength];
-});
+    strengthMeter.value = strength;
+
+    const strengthLabels = ["Very Weak", "Weak", "Fair", "Good", "Strong"];
+    strengthText.textContent = strengthLabels[strength] || "";
+  });
+}
+
+// Call for both login and signup fields
+addStrengthMeter("signupPassword", "signupStrengthMeter", "signupStrengthText");
+addStrengthMeter("loginPassword", "loginStrengthMeter", "loginStrengthText");
